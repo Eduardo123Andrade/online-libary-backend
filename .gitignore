@@ -56,3 +56,6 @@ Thumbs.db
 # Auto Generated Files
 coverage/
 
+# upload local files
+
+uploads/images/book-cover
