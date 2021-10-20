@@ -1,12 +1,13 @@
 import { BookService } from './../../services/book.service';
 import { Request, Response } from "express"
 import httpStatus from 'http-status';
+import { CustomFileType } from 'src/types/file.type';
 
 
 const createBook = async (request: Request, response: Response) => {
     const { title, description, page } = request.body
-    const requestImage = request.file as Express.Multer.File;
-    const { path: imagePath } = requestImage
+    const requestImage = request.file as CustomFileType
+    const { location: imagePath } = requestImage
 
     const book = await BookService.createBook({ title, description, page, imagePath })
 
