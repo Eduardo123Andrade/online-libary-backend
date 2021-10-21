@@ -25,8 +25,13 @@ const findBookById = async (request: Request, response: Response) => {
 const listBooks = async (_request: Request, response: Response) => {
 
     const books = await BookService.listBooks()
+    const orderedBooks = books.sort((a, b ) => {
+        if(a.title < b.title) return -1
+        if(a.title > b.title) return 1
+        return 0
+    }) 
 
-    return response.status(httpStatus.OK).json({ books })
+    return response.status(httpStatus.OK).json(orderedBooks)
 }
 
 
