@@ -57,5 +57,7 @@ Thumbs.db
 coverage/
 
 # upload local files
-
 uploads/images/book-cover
+
+# build files
+build/
