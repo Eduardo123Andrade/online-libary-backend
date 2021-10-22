@@ -1,8 +1,7 @@
 {
-  "name": "bernazzi-backend",
+  "name": "open-library-backend",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://HajimeYoru@bitbucket.org/HajimeYoru/bernazzi-backend.git",
   "author": "Eduardo Andrade <eduardo.andrade15@hotmail.com>",
   "license": "MIT",
   "scripts": {
@@ -12,7 +11,8 @@
     "migration:create": "yarn typeorm migration:create -n",
     "migration:run": "yarn typeorm migration:run",
     "migration:revert": "yarn typeorm migration:revert",
-    "test": "jest"
+    "test": "jest",
+    "build": "node build/src/server.js"
   },
   "dependencies": {
     "aws-sdk": "^2.1011.0",
