@@ -7,7 +7,9 @@ import { CustomFileType } from 'src/types/file.type';
 const createBook = async (request: Request, response: Response) => {
     const { title, description, page } = request.body
     const requestImage = request.file as CustomFileType
-    const { location: imagePath } = requestImage
+    const { location, path } = requestImage
+
+    const imagePath = location ?? path
 
     const book = await BookService.createBook({ title, description, page, imagePath })
 
