@@ -53,6 +53,7 @@ Thumbs.db
 .env
 .env.test
 .env.prod
+.env.dev
 
 
 # Auto Generated Files
