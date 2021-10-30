@@ -8,7 +8,7 @@ const createUser = async (request: Request, response: Response) => {
 
     const user = await AuthService.createUser({ name, email, password })
 
-    return response.status(httpStatus.CREATED).json({ user })
+    return response.status(httpStatus.CREATED).json(user)
 }
 
 const login = async (request: Request, response: Response) => {
@@ -16,7 +16,7 @@ const login = async (request: Request, response: Response) => {
 
     const user = await AuthService.login(email, password)
 
-    return response.status(httpStatus.OK).json({ user })
+    return response.status(httpStatus.OK).json(user)
 }
 
 

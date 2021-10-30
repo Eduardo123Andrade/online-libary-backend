@@ -13,7 +13,7 @@ const createBook = async (request: Request, response: Response) => {
 
     const book = await BookService.createBook({ title, description, page, imagePath })
 
-    return response.status(httpStatus.CREATED).json({ book })
+    return response.status(httpStatus.CREATED).json(book)
 }
 
 const findBookById = async (request: Request, response: Response) => {
@@ -21,7 +21,7 @@ const findBookById = async (request: Request, response: Response) => {
 
     const book = await BookService.findBookById(bookId)
 
-    return response.status(httpStatus.OK).json({ book })
+    return response.status(httpStatus.OK).json(book)
 }
 
 const listBooks = async (_request: Request, response: Response) => {
