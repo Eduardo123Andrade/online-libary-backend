@@ -52,6 +52,8 @@ Thumbs.db
 # env
 .env
 .env.test
+.env.prod
+
 
 # Auto Generated Files
 coverage/
